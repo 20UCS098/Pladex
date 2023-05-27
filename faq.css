@@ -1,0 +1,90 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: Lato, "Noto Sans", sans-serif !important; */
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: linear-gradient(315deg, #1de2c8 0%, #fffbfc 74%);
+  /* background-image: linear-gradient(315deg, rgba(240, 16, 16, 0) 0%, #fffbfc 74%); */
+   /* background-color: black;  */
+  /* color: #fff; */
+  font-family: Lato, "Noto Sans", sans-serif !important;
+}
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.accordion-item {
+  background-color: #ffff;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+   content: "\002B";  
+  /* content: "\00BB"; */
+      /* content: "\27A4"; */
+  /* content: "\279C"; */
+      font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  
+     /* -moz-transform: rotate(-275deg);
+    -ms-transform: rotate(-275deg);
+    -o-transform: rotate(-275deg);
+    -webkit-transform: rotate(-275deg); 
+    transform: rotate(-275deg);  */
+     
+}
+.accordion-item-header.active::after {
+  /* content: "\2212";  */
+  /* content: "\00AB"; */
+  content: "\002B";
+  -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); 
+    transform: rotate(-45deg); 
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #3ab6ad, transparent) 1;
+}
+
+@media(max-width:767px) {
+  html {
+    font-size: 14px;
+  }
+}
+/*#34495e,*/
